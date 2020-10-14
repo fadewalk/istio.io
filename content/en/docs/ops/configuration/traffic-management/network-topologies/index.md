@@ -132,7 +132,6 @@ to understand how `X-Forwarded-For` headers and trusted client addresses are det
 The above output shows the headers that the httpbin workload received. When the Istio gateway received this request, it set the `X-Envoy-External-Address` header to the second to last (`numTrustedProxies: 2`) address in the `X-Forwarded-For` header from your curl command. Additionally, the gateway appends its own IP to the
 `X-Forwarded-For` header before forwarding it to the httpbin workload.
 
-
 ### Configuring X-Forwarded-Client-Cert Headers
 
 From [Envoy's documentation](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#x-forwarded-client-cert)
